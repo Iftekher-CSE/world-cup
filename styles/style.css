@@ -1,0 +1,170 @@
+main {}
+
+/* Top banner style start */
+.top-banner {
+    display: flex;
+    justify-content: center;
+    background: #161616;
+    border-radius: 30px;
+    width: 1321px;
+    height: 646px;
+}
+
+.half-width {
+    color: white;
+    width: 513px;
+}
+
+.half-width h1 {
+    font-size: 70px;
+    font-weight: 700;
+}
+
+.half-width button {
+    background-color: #dd000d;
+    border-radius: 5px;
+    width: 187px;
+    height: 56px;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.half-width img {
+    width: 581px;
+    height: 645px;
+}
+
+/* top banner style end */
+
+/* --------Middle Section style Start----------- */
+.middle {
+    display: flex;
+    padding: 130px 0;
+    column-gap: 30px;
+}
+
+/* manue item style start */
+.manue-select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 312px;
+    height: 312px;
+    background: #161616;
+    border-radius: 10px;
+}
+
+.manue-btn {
+    width: 220px;
+    height: 64px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.manue-select a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    color: #161616;
+}
+
+.selected {
+    background-color: #dd000d;
+}
+
+.selected a {
+    color: white;
+    font-weight: 600;
+}
+
+/* manue item style end */
+
+/* blog item style start */
+.articles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    width: 312px;
+    height: 350px;
+}
+
+.article-details {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.article-details a {
+    text-decoration: none;
+    border: 1px solid rgba(0, 0, 0, 0.354);
+    border-radius: 5px;
+    width: 100px;
+    padding: 3px 0 3px 50px;
+    font-weight: 800;
+    color: #161616;
+}
+
+.article-details h3 {
+    font-weight: 800px;
+}
+
+.article-details-icon {
+    display: flex;
+}
+
+.time-icon {
+    padding-right: 40px;
+}
+
+
+/* blog item style end */
+
+/* --------Middle Section style Start----------- */
+
+
+/* footer style start */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 1600px;
+    height: 444px;
+    background: #161616;
+    color: white;
+}
+
+footer h1 {
+    font-weight: 600;
+    font-size: 40px;
+}
+
+hr {
+    width: 80%;
+    color: rgba(255, 255, 255, 0.1)
+}
+
+.about-us,
+.social-link {
+    display: flex;
+    flex-direction: row;
+    column-gap: 50px;
+    justify-content: space-around;
+}
+
+.fa-brands {
+    color: white;
+    font-size: 30px;
+}
+
+/* footer style end */
