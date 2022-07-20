@@ -6,7 +6,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 100px 100px 100px;
+    padding: 5%;
 
 }
 
@@ -15,25 +15,22 @@ main {
     display: flex;
     flex-direction: row;
     background: #161616;
-    border-radius: 30px;
-    height: 600px;
+    border-radius: 20px;
 }
 
 .banner-container {
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 1.5em;
     color: white;
     width: 50%;
-    margin-left: 80px;
-    margin-top: 60px;
+    padding: 7%;
 }
 
 .banner-container h1 {
-    font-size: 70px;
+    font-size: 4em;
     font-weight: 700;
     margin: 0;
-    line-height: 80px;
 }
 
 .banner-container button,
@@ -41,23 +38,26 @@ main {
     background-color: #dd000d;
     border: 1px solid #dd000d;
     border-radius: 10px;
-    width: 187px;
-    height: 56px;
+    width: 12em;
+    height: 3em;
     color: white;
-    font-size: 20px;
+    font-size: 1.5em;
     font-weight: 400;
 }
 
 .banner-img {
     width: 50%;
+    height: 100%;
     display: flex;
     align-items: flex-end;
     justify-content: center;
 }
 
 .banner-img img {
-    width: 80%;
-    height: 80%;
+    margin-top: 3em;
+    margin-right: 2em;
+    width: 100%;
+    height: 100%;
 }
 
 /* top banner style end */
@@ -85,8 +85,8 @@ ul {
 
 .manue-btn {
     text-align: center;
-    padding: 20px;
-    margin: 30px;
+    padding: 7%;
+    margin: 9%;
     background-color: white;
     border-radius: 10px;
     list-style: none;
@@ -210,3 +210,72 @@ hr {
 }
 
 /* footer style end */
+
+/* ----------Responsive part--------- */
+/* responsive for mobile */
+@media only screen and (max-width: 688px) {
+
+    /* top part */
+    .top-banner {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .banner-container,
+    .banner-img {
+        align-items: center;
+        height: 50%;
+        width: 100%;
+    }
+
+    .banner-img>img {
+        width: 90%;
+        margin: 0;
+    }
+
+    .banner-container>p {
+        overflow: scroll;
+        width: 80%;
+        height: 2.5em;
+    }
+
+    .banner-container>h1 {
+        text-align: center;
+        font-size: 2em;
+    }
+
+    .banner-container button {
+        width: 10em;
+        height: 2em;
+    }
+
+    /* mid part */
+    .middle {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .nav-manue {
+        width: 300px;
+        margin-bottom: 10px;
+    }
+
+    .articles {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* footer part */
+    footer {
+        justify-content: space-evenly;
+        height: 100%;
+    }
+
+    .about-us,
+    .social-link {
+        flex-direction: column;
+        column-gap: 50px;
+        align-items: center;
+    }
+}
