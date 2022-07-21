@@ -7,7 +7,6 @@ main {
     flex-direction: column;
     align-items: center;
     padding: 5%;
-
 }
 
 /* Top banner style start */
@@ -16,6 +15,8 @@ main {
     flex-direction: row;
     background: #161616;
     border-radius: 20px;
+    align-items: flex-end;
+    margin-bottom: 5%;
 }
 
 .banner-container {
@@ -34,7 +35,7 @@ main {
 }
 
 .banner-container button,
-.tab-btn button {
+#tab-btn button {
     background-color: #dd000d;
     border: 1px solid #dd000d;
     border-radius: 10px;
@@ -60,18 +61,49 @@ main {
     height: 100%;
 }
 
+/* animation start */
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes color-change {
+    0% {
+        background-color: #dd000d;
+    }
+
+    100% {
+        background-color: blueviolet;
+    }
+}
+
+.fa-square-caret-right {
+    animation: rotating 2s ease-in-out 1S infinite;
+}
+
+#top-btn:hover {
+    animation: color-change 1s ease 0s infinite alternate;
+}
+
+/* animation end */
+
 /* top banner style end */
 
 /* --------Middle Section style Start----------- */
 .middle {
     display: flex;
-    padding: 120px 0 60px 0;
+    padding: 80px 0 60px 0;
     column-gap: 25px;
 }
 
 /* nav item style start */
 .nav-manue {
-    width: 440px;
+    min-width: 350px;
     height: 300px;
     background: #161616;
     border-radius: 10px;
@@ -85,8 +117,8 @@ ul {
 
 .manue-btn {
     text-align: center;
-    padding: 7%;
-    margin: 9%;
+    padding: 1.5em;
+    margin: 1.25em;
     background-color: white;
     border-radius: 10px;
     list-style: none;
@@ -129,6 +161,22 @@ ul {
     height: 350px;
 }
 
+.um-article {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    height: 200px;
+    width: 15em;
+}
+
+.um-flags {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5%;
+}
+
 .article-image img {
     width: 100%;
 }
@@ -137,6 +185,16 @@ ul {
     display: flex;
     flex-direction: column;
     padding: 10px;
+}
+
+.um-rticle-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.um-rticle-details h5 {
+    margin: 0;
 }
 
 .article-details a {
@@ -151,6 +209,8 @@ ul {
 
 .article-details h3 {
     font-weight: 800;
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
 }
 
 .article-details-icon {
@@ -167,7 +227,7 @@ ul {
 /* --------Middle Section style Start----------- */
 
 /* Tab special btn style start */
-.tab-btn {
+#tab-btn {
     display: none;
 }
 
@@ -211,7 +271,7 @@ hr {
 
 /* footer style end */
 
-/* ----------Responsive part--------- */
+/* ----------Responsive part----------- */
 /* responsive for mobile */
 @media only screen and (max-width: 688px) {
 
@@ -260,10 +320,20 @@ hr {
     .nav-manue {
         width: 300px;
         margin-bottom: 10px;
+        background-color: white
+    }
+
+    .nav-manue li {
+        border: 1px solid black;
     }
 
     .articles {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .article-details h3 {
+        margin-top: .5em;
+        margin-bottom: .5em;
     }
 
     /* footer part */
@@ -277,5 +347,94 @@ hr {
         flex-direction: column;
         column-gap: 50px;
         align-items: center;
+    }
+}
+
+/* responsive for tab */
+@media only screen and (min-width: 689px) and (max-width: 992px) {
+    main {
+        padding: 2%;
+    }
+
+    /* top part */
+    .banner-container {
+        row-gap: .5em;
+        padding: 2em;
+    }
+
+    .banner-container>h1 {
+        font-size: 2.75em;
+    }
+
+    .banner-container button {
+        width: 8em;
+        height: 2em;
+    }
+
+    .banner-img>img {
+        width: 100%;
+        margin-right: 2em;
+    }
+
+    /* mid part */
+    .middle {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .nav-manue {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 10px;
+        background-color: white;
+    }
+
+    .nav-manue ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    .manue-btn {
+        border: 1px solid black;
+        float: left;
+        padding: 3% 3%;
+        margin: 1%;
+        width: 12em;
+    }
+
+    .articles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .article-details h3 {
+        margin-top: .5em;
+        margin-bottom: .5em;
+    }
+
+    /* special tab btn */
+
+    #tab-btn {
+        display: block;
+        margin-top: 3em;
+        margin-bottom: 3em;
+    }
+
+    /* footer part */
+    footer {
+        height: auto;
+        padding: 2em;
+    }
+
+    footer h1 {
+        margin-block-end: 0;
+    }
+
+    .about-us,
+    .social-link {
+        width: 80%;
+        flex-wrap: wrap;
+        column-gap: 3em;
+        justify-content: center;
     }
 }
